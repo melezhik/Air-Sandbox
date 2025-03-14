@@ -1,0 +1,4 @@
+note: between: "<div class="jumbotron">"  ... "</div>"
+between: { '<div class="jumbotron">' } { "</div>"}
+  regexp: "<h1>Welcome to Dunder Mifflin!</h1>"
+end:  
