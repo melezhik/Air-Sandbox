@@ -1,5 +1,6 @@
 note: between: "<div class="jumbotron">"  ... "</div>"
 note: check for <h1>Welcome to Dunder Mifflin!</h1>
+
 between: { '<div class="jumbotron">' } { "</div>"}
   regexp: "<h1>Welcome to Dunder Mifflin!</h1>"
 end:  
@@ -9,4 +10,10 @@ note: check for <p hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode"
 
 within: { "<p" \s+ .* ">" } ( .* )   { "</p>"} 
   regexp: ^^ "Click me" $$
+end:
+
+note: Escaped & Raw HTML
+
+within: { "<p>" } ( .* ) { "</p>"} 
+  regexp: ^^ "&lt;div class=&quot;content&quot;&gt;Escaped &amp; Raw HTML!&lt;/div&gt;" $$
 end:
