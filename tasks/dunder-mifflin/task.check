@@ -8,7 +8,7 @@ end:
 
 note: check for <p hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode">Click Me</p>
 
-within:  "<p" \s+ (.*) ">"  .*  "</p>"
+within:  "<p" \s+ .* ">"  ( .* )  "</p>"
   regexp: ^^ "Click Me" $$
 end:
 
