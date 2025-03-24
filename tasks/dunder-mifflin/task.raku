@@ -1,6 +1,5 @@
 use Air::Functional;
 
-
 #had to fine tune the stock symbol& END newline to make test work (editor trims trailing spaces)
 
 my $main = main [
