@@ -28,3 +28,5 @@ sub SITE is export {
                     planets;
                 ]
 }
+
+say SITE();
