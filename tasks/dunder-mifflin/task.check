@@ -12,8 +12,9 @@ note: check for <p hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode"
 #regexp:  "<p" \s+ .* ">"  ( .* )   "</p>"
 
 
-within:  "<p" \s+ .* ">"  ( .* )   "</p>"
-  regexp: "Click Me"
+within:  "<p" \s+ .* ">"  .*    "</p>"
+  regexp: "<p" \s+ .* ">"  (.*)    "</p>"
+  regexp: ^^ "Click Me" $$
 end:
 
 note: check for Escaped & Raw HTML
