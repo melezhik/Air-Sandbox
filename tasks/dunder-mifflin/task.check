@@ -14,6 +14,9 @@ end:
 
 note: check for Escaped & Raw HTML
 
+
+regexp: '<p>&lt;div class=&quot;content&quot;&gt;Escaped &amp; Raw HTML!&lt;/div&gt;</p>'
+
 within: "<p>" ( .* ) "</p>"
   regexp: ^^ '&lt;div class=&quot;content&quot;&gt;Escaped &amp; Raw HTML!&lt;/div&gt;' $$
 end:
